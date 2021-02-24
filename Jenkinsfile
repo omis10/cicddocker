@@ -7,15 +7,7 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/omis10/cicddocker.git'
              
           }
-        }
-	 stage('Execute Maven') {
-           steps {
-             
-                sh 'mvn package'             
-          }
-        }
-        
-
+        }    
   stage('Docker Build and Tag') {
            steps {
               
